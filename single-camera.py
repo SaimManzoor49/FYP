@@ -8,7 +8,7 @@ from collections import defaultdict
 import cv2
 
 class PersonReID:
-    def __init__(self, yolo_model='yolov8n.pt', reid_model='osnet_x1_0', device='cuda'):
+    def __init__(self, yolo_model='yolov8n.pt', reid_model='osnet_ain_x1_0', device='cuda'):
         self.device = device
         self.yolo = YOLO(yolo_model)
         self.extractor = FeatureExtractor(
@@ -281,12 +281,12 @@ class PersonReID:
 
 def main():
     reid_system = PersonReID(
-        yolo_model='./models/yolov8n.onnx',
+        yolo_model='./models/yolov8n.pt',
         reid_model='osnet_ain_x1_0',
         device='cpu'
     )
 
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture('./videos/4p1.mp4')
     width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     fps = int(cap.get(cv2.CAP_PROP_FPS))
