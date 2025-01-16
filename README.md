@@ -43,7 +43,7 @@ Creating and activating a virtual environment ensures dependencies are managed c
 
 ## Step 3: Configure Models or Video Sources
 
-1. Open the configuration files or script settings.
+1. Open the configuration files or main file.
 2. Adjust the paths to models, video sources, or other settings as required for your use case.
 
 ---
@@ -51,7 +51,9 @@ Creating and activating a virtual environment ensures dependencies are managed c
 ## Step 4: Run the Project
 
 After completing the above steps, you can start the project as needed. Ensure your environment is active during runtime.
-
+ ```cmd
+  python main.py
+   ```
 ---
 
 ## Notes
